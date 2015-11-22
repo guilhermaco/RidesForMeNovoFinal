@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00BCD4"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ridesforme.ridesforme.FilterCaronaActivity"
+    tools:showIn="@layout/activity_filter_carona">
+
+    <EditText
+        android:id="@+id/bairroOridem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="62dp"
+        android:hint="@string/field_origem_filter_carona" />
+
+    <EditText
+        android:id="@+id/bairroDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bairroOridem"
+        android:hint="@string/field_destino_filter_carona" />
+
+    <Button
+        android:id="@+id/btnPesquisarCarona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/radioGroup2"
+        android:background="#ffffff"
+        android:text="@string/btnPesquisaFiltro"
+        android:textColor="#00BCD4" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/title_filter_carona"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/edtFiltroDataSaida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bairroDestino"
+        android:ems="10"
+        android:hint="Data Saida"
+        android:inputType="date"
+        android:layout_toStartOf="@+id/imageViewDate"
+        android:layout_toLeftOf="@+id/imageViewDate"
+        android:enabled="true"/>
+
+    <EditText
+        android:id="@+id/edtFiltroHoraSaida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/edtFiltroDataSaida"
+        android:ems="10"
+        android:hint="Hora Saida"
+        android:inputType="time"
+        android:layout_alignRight="@+id/edtFiltroDataSaida"
+        android:layout_alignEnd="@+id/edtFiltroDataSaida"
+        android:enabled="false"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtFiltroHoraSaida"
+        android:layout_alignStart="@+id/edtFiltroHoraSaida"
+        android:layout_below="@+id/edtFiltroHoraSaida">
+
+        <RadioButton
+            android:id="@+id/rdbFree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Caronas Grátis" />
+
+        <RadioButton
+            android:id="@+id/rdbPagas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Caronas Pagas" />
+
+        <RadioButton
+            android:id="@+id/rdbAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Todas as Caronas" />
+
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageViewDate"
+        android:src="@drawable/date"
+        android:layout_above="@+id/edtFiltroHoraSaida"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageViewTime"
+        android:src="@drawable/time"
+        android:layout_above="@+id/radioGroup2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
